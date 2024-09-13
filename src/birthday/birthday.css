@@ -1,0 +1,87 @@
+
+.birthday-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background-color: #f0f0f0;
+}
+
+.envelope {
+  position: relative;
+  width: 360px;
+  height: 260px;
+  background-color: #d4af37;
+  border: 2px solid #8b4513;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  perspective: 1000px;
+  transform-origin: top;
+  z-index: 10;
+}
+
+.envelope-flap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  background-color: #8b4513;
+  transform-origin: top;
+}
+
+.envelope-body {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #d4af37;
+  overflow: hidden;
+}
+
+.birthday-card {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(100%);
+  transition: transform 1s ease;
+  opacity: 0;
+}
+
+.birthday-card.slide-out {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.animations {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.balloons {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.confetti {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
